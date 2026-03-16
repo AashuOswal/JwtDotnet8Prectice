@@ -24,7 +24,7 @@ namespace JwtDotnet8Prectice.Controllers
             new User {Id = 3, Email ="Charlie@Example.com", Name = "Charlie", Password = "charlie123", Roles = "Admin" }
         };
         [HttpPost("Login")]
-        [ResponseCache(Duration = 60)]
+        [ResponseCache(Duration = 505)]
         public async Task<ActionResult> Login(UserLogin obj)
         {
             if (obj == null)

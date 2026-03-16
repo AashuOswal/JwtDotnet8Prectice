@@ -71,13 +71,13 @@ builder.Services.AddRateLimiter(options =>
 {
     options.AddFixedWindowLimiter("fixed", opt =>
     {
-        opt.PermitLimit = 2;
+        opt.PermitLimit = 50;
         opt.Window = TimeSpan.FromMinutes(11);
     });
 });
 builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter("HitCoundPolicy",
     opt => {
-        opt.PermitLimit = 1;
+        opt.PermitLimit = 77;
         opt.Window = TimeSpan.FromMicroseconds(2);
         }
 ));
